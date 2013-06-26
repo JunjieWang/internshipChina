@@ -1,10 +1,11 @@
 package Controller;
-/**
- * Add a description test 
- * 
- **/
-import java.util.Date;
 
+import java.util.Date;
+/**
+ * Class for a Single Post
+ * @author taozheng
+ *
+ */
 public class OnePost {
 	private String title;
 	private String dateString;
