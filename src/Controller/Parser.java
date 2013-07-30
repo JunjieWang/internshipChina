@@ -10,6 +10,11 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.Charset;
+import java.util.ArrayList;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
 
 import sun.net.www.http.HttpClient;
 
@@ -21,6 +26,7 @@ import sun.net.www.http.HttpClient;
  */
 public class Parser {
 	private static String urlprefix = "http://www.yingjiesheng.com/beijing-moreptjob-1.html";
+	
 	Parser () {
 		
 	}
@@ -53,47 +59,24 @@ public class Parser {
 		return sb.toString();
 	}
 	
-	public static String test() {
-		String htmlContent = "";
-		try {
-			URL url = new URL("http://www.tdrd.org");
-			URLConnection con = url.openConnection();
-			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-		    connection.connect();
-		    InputStream inputStream = connection.getInputStream();
-		    
-		    byte bytes[] = new byte[1024*100]; 
-		    int index = 0;
-		    int count = inputStream.read(bytes, index, 1024*100);
-		    while (count != -1) {
-		      index += count;
-		      count = inputStream.read(bytes, index, 1);
-		    }
-		    System.out.println (count);
-		    htmlContent = new String(bytes, "gb2312");//
-	
-		} catch (MalformedURLException e) {
-			// TODO: handle exception
-		} catch (IOException e) {
-			// TODO: handle exception
-		}
-		return htmlContent;
+	private static String getTableTag(String htmlContent) {
+		String tableContent = "";
+		Document doc =  Jsoup.parse(htmlContent);
+		
+		Elements elements = doc.getElementsByTag("table");
+		System.out.println(elements.get(0));
+		tableContent = elements.get(0).toString();
+		return tableContent;
 	}
 	
-	public static String readHtml(String myurl) {
-	    StringBuffer sb = new StringBuffer("");
-	    URL url;
-	    try {
-	        url = new URL(myurl);
-	        BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream(), "gbk"));
-	        String s = "";
-	        while ((s = br.readLine()) != null) {
-	            sb.append(s + "\r\n");
-	        }
-	    } catch (Exception e) {
-	        e.printStackTrace();
-	    }
-	    return sb.toString();
+	public static ArrayList<OnePost> getPosts(String tableContent) {
+		ArrayList<OnePost> posts = new ArrayList<OnePost>();
+		Document document = Jsoup.parse(tableContent);
+		
+		//abstract one <tr> entry
+		Elements tr = document.getElementsByTag("tr");
+		System.out.println(tr.size());
+		return posts;
 	}
 	/**
 	 * This section is used for test.
@@ -101,8 +84,10 @@ public class Parser {
 	 */
 	public static void main(String[] args) {
 		String preparedURL = urlprefix;
-		System.out.println(getHtmlContent(preparedURL));
-		System.out.println("============================");
-		System.out.println(readHtml("http://www.yingjiesheng.com/beijing-moreptjob-1.html"));
+		String htmlContent = getHtmlContent(preparedURL);
+		//System.out.println(htmlContent);
+		String tableContent = getTableTag(htmlContent);
+		System.out.println("表格" + tableContent);
+		getPosts(tableContent);
 	}
 }
