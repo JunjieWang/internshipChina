@@ -34,39 +34,45 @@ expressionOut.print(resource(dir: 'images', file: 'apple-touch-icon.png'))
 printHtmlPart(4)
 expressionOut.print(resource(dir: 'images', file: 'apple-touch-icon-retina.png'))
 printHtmlPart(5)
-expressionOut.print(resource(dir: 'css', file: 'main.css'))
+expressionOut.print(resource(dir: 'css', file: 'bootstrap.css'))
 printHtmlPart(6)
-expressionOut.print(resource(dir: 'css', file: 'mobile.css'))
+expressionOut.print(resource(dir: 'css', file: 'index.css'))
 printHtmlPart(7)
-invokeTag('layoutHead','g',17,[:],-1)
-printHtmlPart(1)
-invokeTag('javascript','g',18,['library':("application")],-1)
+expressionOut.print(resource(dir: 'fonts', file: 'glyphicons-halflings-regular.eot'))
 printHtmlPart(8)
-invokeTag('layoutResources','r',19,[:],-1)
+expressionOut.print(resource(dir: 'fonts', file: 'glyphicons-halflings-regular.eot?#iefix'))
 printHtmlPart(9)
-})
-invokeTag('captureHead','sitemesh',20,[:],1)
-printHtmlPart(9)
-createTagBody(1, {->
+expressionOut.print(resource(dir: 'fonts', file: 'glyphicons-halflings-regular.woff'))
 printHtmlPart(10)
-expressionOut.print(resource(dir: 'images', file: 'grails_logo.png'))
+expressionOut.print(resource(dir: 'fonts', file: 'glyphicons-halflings-regular.ttf'))
 printHtmlPart(11)
-invokeTag('layoutBody','g',23,[:],-1)
+expressionOut.print(resource(dir: 'fonts', file: 'glyphicons-halflings-regular.svg#glyphicons-halflingsregular'))
 printHtmlPart(12)
-invokeTag('message','g',25,['code':("spinner.alt"),'default':("Loading&hellip;")],-1)
+invokeTag('layoutHead','g',24,[:],-1)
+printHtmlPart(1)
+invokeTag('javascript','g',25,['library':("application")],-1)
 printHtmlPart(13)
 invokeTag('layoutResources','r',26,[:],-1)
-printHtmlPart(9)
-})
-invokeTag('captureBody','sitemesh',27,[:],1)
 printHtmlPart(14)
+})
+invokeTag('captureHead','sitemesh',27,[:],1)
+printHtmlPart(14)
+createTagBody(1, {->
+printHtmlPart(15)
+invokeTag('layoutBody','g',66,[:],-1)
+printHtmlPart(16)
+invokeTag('layoutResources','r',68,[:],-1)
+printHtmlPart(17)
+})
+invokeTag('captureBody','sitemesh',83,[:],1)
+printHtmlPart(18)
 }
 public static final Map JSP_TAGS = new HashMap()
 protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1385061674000L
+public static final long LAST_MODIFIED = 1392520468394L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'

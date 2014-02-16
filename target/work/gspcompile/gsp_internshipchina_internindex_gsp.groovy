@@ -32,26 +32,28 @@ loop:{
 int i = 0
 for( intern in (internlist) ) {
 printHtmlPart(7)
-expressionOut.print((i % 2) == 0 ? 'even' : 'odd')
-printHtmlPart(8)
 expressionOut.print(intern.title)
+printHtmlPart(8)
+expressionOut.print(intern.location)
 printHtmlPart(9)
-expressionOut.print(intern.description)
+expressionOut.print(intern.date)
 printHtmlPart(10)
+expressionOut.print(intern.source)
+printHtmlPart(11)
 i++
 }
 }
-printHtmlPart(11)
-})
-invokeTag('captureBody','sitemesh',38,[:],1)
 printHtmlPart(12)
+})
+invokeTag('captureBody','sitemesh',137,[:],1)
+printHtmlPart(13)
 }
 public static final Map JSP_TAGS = new HashMap()
 protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1392403211886L
+public static final long LAST_MODIFIED = 1392514633747L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'

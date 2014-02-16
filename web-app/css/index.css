@@ -1,0 +1,107 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.infoentry {
+	height:	75px;
+}
+
+.top-line {
+	margin-top: 3px;
+}
+
+.middle-line {
+	margin-top: 5px;
+}
+
+.buttom-line {
+	margin-top: 5px;
+}
+
+.entry-title {
+	font-weight: 500;
+	font-size:	16px;
+}
+	.entry-title a:hover {
+		text-decoration: none;
+	}
+
+
+.page-left {
+	padding-right: 0px;
+}
+
+.page-right {
+	margin-top: 20px;
+	padding-left: 0px;
+}
+
+.joblist {
+	padding-left: 0px;
+}	
+
+.joblist li {
+	list-style: none;
+}
+
+.joblist-line {
+	border-top: 1px solid #DFDFDF;
+	padding: 5px;
+	padding-left: 15px;
+	/* box-shadow: 0px 2px #dfdfdf; */
+}
+	.joblist-line:hover {
+		background: rgb(250,250,250);
+	}
+
+.top-line a {
+	
+}
+
+.middle-line i {
+	margin-left: 10px;
+	color: #777777;
+}
+	.middle-line i:first-child {
+		margin-left: 0px;
+	}
+	
+.title-fav {
+	font-size: 14px;
+	font-weight: 300;
+}
+	.title-fav:hover {
+		
+	}
+	
+	
+.filter {
+	margin-top: 20px;
+	background: rgb(248,248,248);  
+	padding: 5px;
+	margin-bottom: 30px;
+	border-right: 1px solid #DFDFDF;
+}
+	
+	.filter-group {
+		list-style: none;
+		border-top: 1px solid #DFDFDF; 
+		padding-top: 10px;
+		margin-top: 10px;
+		margin-bottom: 15px;
+	}
+	
+	.filter-group:first-child {
+		margin-top: 0px;
+		border-top: none;
+	}
+	
+	.filter-title {
+		font-size: 16px;
+		font-weight: 600;
+	}
+	
+	
+	
