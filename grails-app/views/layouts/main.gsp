@@ -35,7 +35,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                       </button>
-                      <a class="navbar-brand title-tdrd" href="index.gsp">找实习 - Intern China</a>
+                      <a class="navbar-brand title-tdrd" href="index">找实习 - Intern China</a>
                     </div>
                     <div class="navbar-collapse collapse">
 
@@ -69,10 +69,10 @@
                 <div class="container" style="border-top: 1px solid #DFDFDF; margin-top: 40px;">
                         <div class="footer" style="text-align: center; margin-top: 15px;">
                                 <p> 
-                                        <a href="aboutus.gsp">招纳贤士</a> 
+                                        <a href="/aboutus">招纳贤士</a> 
                                         | <a href="/aboutus">About Us</a>
-                                        | <a href="aboutus.gsp">项目介绍</a>
-                                        | <a href="aboutus.gsp">免责声明</a>
+                                        | <a href="/aboutus">项目介绍</a>
+                                        | <a href="/aboutus">免责声明</a>
                                 </p>
                                 <p>&copy; Powered by <a href="#">Team 528</a>. All Rights Reserved</p>
                         </div>
