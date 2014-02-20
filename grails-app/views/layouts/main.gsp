@@ -70,7 +70,7 @@
                         <div class="footer" style="text-align: center; margin-top: 15px;">
                                 <p> 
                                         <a href="/aboutus">招纳贤士</a> 
-                                        | <a href="/aboutus">About Us</a>
+                                        | <g:link controller="aboutUs" action="index">About Us</g:link>
                                         | <a href="/aboutus">项目介绍</a>
                                         | <a href="/aboutus">免责声明</a>
                                 </p>
