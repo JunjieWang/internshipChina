@@ -63,16 +63,23 @@ invokeTag('layoutBody','g',66,[:],-1)
 printHtmlPart(16)
 invokeTag('layoutResources','r',68,[:],-1)
 printHtmlPart(17)
+createClosureForHtmlPart(18, 2)
+invokeTag('link','g',73,['controller':("aboutUs"),'action':("index")],2)
+printHtmlPart(19)
+expressionOut.print(resource(dir: 'js', file: 'bootstrap.min.js'))
+printHtmlPart(20)
+expressionOut.print(resource(dir: 'js', file: 'index.js'))
+printHtmlPart(21)
 })
-invokeTag('captureBody','sitemesh',83,[:],1)
-printHtmlPart(18)
+invokeTag('captureBody','sitemesh',84,[:],1)
+printHtmlPart(22)
 }
 public static final Map JSP_TAGS = new HashMap()
 protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1392786274552L
+public static final long LAST_MODIFIED = 1392958040010L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'

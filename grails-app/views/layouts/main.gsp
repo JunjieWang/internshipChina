@@ -78,7 +78,8 @@
                         </div>
                 </div>
                 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-                <script src="js/bootstrap.min.js"></script>
+                <script src="${resource(dir: 'js', file: 'bootstrap.min.js')}"></script>
+                <script src="${resource(dir: 'js', file: 'index.js')}"></script>
                 <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
 	</body>
 </html>

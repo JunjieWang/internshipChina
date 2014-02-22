@@ -7,8 +7,14 @@ class Intern {
     String location
     String description
     String category
+    def desclines
     
     static constraints = {
+        desclines nullable:true
+    }
     
+    static mapping = {
+        sort date:"desc"
+        
     }
 }

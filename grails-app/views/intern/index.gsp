@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta name="layout" content="main"/>
-	<title>找实习 - 中国最可靠的实习信息发布网站</title>
+        <title>找实习 - 中国最可靠的实习信息发布网站</title>
     </head>
     <body> 
         <div class="container">
@@ -84,55 +84,62 @@
                     <div class="col-md-9 page-right">
                         <ul class="joblist">
                             <g:each status="i" in="${internlist}" var="intern">
-                            <li class="joblist-line">
-                                <div class="infoentry">
-                                    <div class="top-line">
-                                        <span class="entry-title">
-                                            <a href="#">
-                                                ${intern.title}
+                                <li class="joblist-line" id="${'showdetail'+i}">
+                                    <div class="infoentry">
+                                        <div class="top-line">
+                                            <span class="entry-title">
+                                                <a href="#">
+                                                    ${intern.title}
+                                                </a>
+                                                <span class="pull-right title-fav">
+                                                    <i class="glyphicon glyphicon-star-empty"></i>收藏
+                                                </span>
+                                            </span> 
+                                        </div> 
+
+                                        <div class="middle-line">
+                                            <i class="glyphicon glyphicon-map-marker"></i> ${intern.location}   
+                                            <i class="glyphicon glyphicon-time"></i> ${intern.date}  
+                                            <i class="glyphicon glyphicon-globe"></i> ${intern.source}
+                                        </div> 
+
+                                        <div class="buttom-line">
+
+                                            <a href="${'#showdetail'+i}" onclick="hide('${'detail'+i}','${'showdetail'+i}')">
+                                                详细信息<b class="caret"></b>
                                             </a>
-                                            <span class="pull-right title-fav">
-                                                <i class="glyphicon glyphicon-star-empty"></i>收藏
+
+                                            <span class="pull-right">
+                                                    <!-- JiaThis Button BEGIN -->
+                                                <div class="jiathis_style"><span class="jiathis_txt">分享到：</span>
+                                                    <a class="jiathis_button_weixin"></a>
+                                                    <a class="jiathis_button_tsina"></a>
+                                                    <a class="jiathis_button_renren"></a>
+                                                    <a class="jiathis_button_linkedin"></a>
+                                                </div>
+                                                <!-- JiaThis Button END -->
                                             </span>
-                                        </span> 
-                                    </div> 
-
-                                    <div class="middle-line">
-                                        <i class="glyphicon glyphicon-map-marker"></i> ${intern.location}   
-                                        <i class="glyphicon glyphicon-time"></i> ${intern.date}  
-                                        <i class="glyphicon glyphicon-globe"></i> ${intern.source}
-                                    </div> 
-
-                                    <div class="buttom-line">
-
-                                        <a href="">
-                                            详细信息<b class="caret"></b>
-                                        </a>
-
-                                        <span class="pull-right">
-                                                <!-- JiaThis Button BEGIN -->
-                                            <div class="jiathis_style"><span class="jiathis_txt">分享到：</span>
-                                                <a class="jiathis_button_weixin"></a>
-                                                <a class="jiathis_button_tsina"></a>
-                                                <a class="jiathis_button_renren"></a>
-                                                <a class="jiathis_button_linkedin"></a>
-                                            </div>
-                                            <!-- JiaThis Button END -->
-                                        </span>
+                                        </div>
                                     </div>
+                                </li>
+                                <div id="${'detail'+i}" class="detailinfo" style="display: none;">
+                                    <!-- ${intern.description} -->
+                                     <g:each status="j" in="${intern.desclines}" var="dl">
+                                         ${dl} <br />
+                                     </g:each>
                                 </div>
-                            </li>
-
-                            <!-- <div style="height: 200px; margin-left: 5px; margin-right: 2px; border: 1px solid #dfdfdf; border-top: none; border-radius: 0 0px 5px 5px;
-                                                    margin-bottom: 10px;">
-                                                    内容
-                            </div> -->
+                                <!-- <div style="height: 200px; margin-left: 5px; margin-right: 2px; border: 1px solid #dfdfdf; border-top: none; border-radius: 0 0px 5px 5px;
+                                                        margin-bottom: 10px;">
+                                                        内容
+                                </div> -->
                             </g:each>
                         </ul>
                     </div>
                 </div> <!-- end of .row -->
             </div>
         </div>
-
+                <div>
+                    ${orgin}
+                </div>
     </body>
 </html>

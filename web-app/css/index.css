@@ -103,5 +103,16 @@ body {
 		font-weight: 600;
 	}
 	
+.detailinfo {
+	margin-top: -2px;
+	padding: 15px;
+	box-shadow: 2px 2px #efefef;
+	border-left: 1px solid #efefef;
+	
+}
+
+.entry-expand {
+	box-shadow: 2px 0px #efefef;
+}
 	
 	
